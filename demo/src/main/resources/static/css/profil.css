@@ -1,0 +1,20 @@
+@import url('dashboard.css');
+
+form label {
+  font-weight: 600;
+  color: var(--gris-fonce);
+}
+
+form .btn-primary {
+  background-color: var(--blue-nuit);
+  border: none;
+}
+
+form .btn-primary:hover {
+  background-color: var(--blue-clair);
+}
+
+dl dt {
+  font-weight: 600;
+  color: var(--blue-nuit);
+}

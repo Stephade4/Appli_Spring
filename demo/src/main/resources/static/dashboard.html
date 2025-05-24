@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tableau de bord - TransUrban Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/dashboard.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar" aria-label="Menu de navigation">
+    <h3>TransUrban</h3>
+    <ul class="nav flex-column" role="menu">
+      <li role="none"><a href="dashboard.html" class="nav-link active" role="menuitem"><i
+            class="bi bi-speedometer2"></i> Tableau de bord</a></li>
+      <li role="none"><a href="planning.html" class="nav-link" role="menuitem"><i class="bi bi-calendar3"></i> Planning</a>
+      </li>
+      <li role="none"><a href="gestion-etat.html" class="nav-link" role="menuitem"><i class="bi bi-truck"></i> Véhicules &
+          Conducteurs</a></li>
+      <li role="none"><a href="enregistrement-conducteur.html" class="nav-link" role="menuitem"><i
+            class="bi bi-person-plus"></i> Enregistrer Conducteur</a></li>
+      <li role="none"><a href="creation-admin.html" class="nav-link" role="menuitem"><i class="bi bi-shield-lock"></i> Créer
+          Admin</a></li>
+      <li role="none"><a href="notifications.html" class="nav-link" role="menuitem"><i class="bi bi-bell"></i>
+          Notifications</a></li>
+      <li role="none"><a href="profil.html" class="nav-link" role="menuitem"><i class="bi bi-person-circle"></i> Profil</a>
+      </li>
+      <li role="none"><a href="effectifs.html" class="nav-link" role="menuitem"><i class="bi bi-people"></i> Effectifs</a>
+      </li>
+      <li role="none"><a href="ajout-trajet.html" class="nav-link" role="menuitem"><i class="bi bi-bell"></i>
+          Differente trajetctoire</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overlay -->
+  <div id="sidebarOverlay" tabindex="-1" aria-hidden="true"></div>
+
+  <!-- Main content -->
+  <main class="main-content" tabindex="-1">
+    <header class="header">
+      <button class="menu-btn" id="menuToggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false"
+        aria-controls="sidebar">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="logo">TransUrban Admin</div>
+      <div class="profile">
+        <button title="Notifications" aria-label="Notifications">
+          <i class="bi bi-bell"></i>
+        </button>
+        <img src="assets/images/logo.png" alt="Profil Admin" />
+      </div>
+    </header>
+
+    <section class="container-fluid">
+      <h2 class="mb-4" style="color: var(--blue-nuit)">Tableau de bord</h2>
+
+      <!-- Statistiques -->
+      <div class="stats-row" role="region" aria-label="Statistiques principales">
+        <div class="stat-card stat-reservations" tabindex="0">
+          <h5>Réservations</h5>
+          <h2>120</h2>
+          <small>Cette semaine</small>
+        </div>
+        <div class="stat-card stat-paiements" tabindex="0">
+          <h5>Paiements</h5>
+          <h2>80</h2>
+          <small>Cette semaine</small>
+        </div>
+        <div class="stat-card stat-clients" tabindex="0">
+          <h5>Clients</h5>
+          <h2>300</h2>
+          <small>Actifs</small>
+        </div>
+        <div class="stat-card stat-trajets" tabindex="0">
+          <h5>Trajets</h5>
+          <h2><span  id="trajet_count"></span></h2>
+          <small>Planifiés</small>
+        </div>
+      </div>
+
+      <!-- Planning semaine -->
+      <section aria-label="Planning de transport de la semaine en cours">
+        <h4 class="mb-3">Planning de transport - Semaine en cours</h4>
+        <div class="planning-container">
+
+          <!-- Lundi -->
+          <div class="day-block" role="region" aria-labelledby="day1-title">
+            <div class="day-title" id="day1-title">Lundi 05/05</div>
+            <div class="trips-list">
+              <article class="trip-card" tabindex="0"
+                aria-label="Trajet à 08h00 de Douala vers Yaoundé, conducteur Jean Dupont, 45 places réservées sur 70">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&q=80"
+                  alt="Image du trajet Douala vers Yaoundé" class="trip-img" loading="lazy" />
+                <div class="trip-info">
+                  <div class="trip-time">08:00</div>
+                  <div class="trip-route">Douala → Yaoundé</div>
+                  <div class="trip-driver">Conducteur : Jean Dupont</div>
+                  <div class="trip-seats">45 / 70 places réservées</div>
+                </div>
+              </article>
+              <article class="trip-card" tabindex="0"
+                aria-label="Trajet à 15h00 de Douala vers Kribi, conducteur Marie Claire, 30 places réservées sur 70">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+                  alt="Image du trajet Douala vers Kribi" class="trip-img" loading="lazy" />
+                <div class="trip-info">
+                  <div class="trip-time">15:00</div>
+                  <div class="trip-route">Douala → Kribi</div>
+                  <div class="trip-driver">Conducteur : Marie Claire</div>
+                  <div class="trip-seats">30 / 70 places réservées</div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Mardi -->
+          <div class="day-block" role="region" aria-labelledby="day2-title">
+            <div class="day-title" id="day2-title">Mardi 06/05</div>
+            <div class="trips-list">
+              <article class="trip-card" tabindex="0"
+                aria-label="Trajet à 09h00 de Yaoundé vers Bafoussam, conducteur Paul Martin, 50 places réservées sur 70">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+                  alt="Image du trajet Yaoundé vers Bafoussam" class="trip-img" loading="lazy" />
+                <div class="trip-info">
+                  <div class="trip-time">09:00</div>
+                  <div class="trip-route">Yaoundé → Bafoussam</div>
+                  <div class="trip-driver">Conducteur : Paul Martin</div>
+                  <div class="trip-seats">50 / 70 places réservées</div>
+                </div>
+              </article>
+              <article class="trip-card" tabindex="0"
+                aria-label="Trajet à 14h00 de Yaoundé vers Douala, conducteur Sophie Lemaire, 30 places réservées sur 70">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80"
+                  alt="Image du trajet Yaoundé vers Douala" class="trip-img" loading="lazy" />
+                <div class="trip-info">
+                  <div class="trip-time">14:00</div>
+                  <div class="trip-route">Yaoundé → Douala</div>
+                  <div class="trip-driver">Conducteur : Sophie Lemaire</div>
+                  <div class="trip-seats">30 / 70 places réservées</div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Mercredi -->
+          <div class="day-block" role="region" aria-labelledby="day3-title">
+            <div class="day-title" id="day3-title">Mercredi 07/05</div>
+            <div class="trips-list">
+              <article class="trip-card" tabindex="0"
+                aria-label="Trajet à 10h00 de Bafoussam vers Douala, conducteur Jean Dupont, 40 places réservées sur 70">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80"
+                  alt="Image du trajet Bafoussam vers Douala" class="trip-img" loading="lazy" />
+                <div class="trip-info">
+                  <div class="trip-time">10:00</div>
+                  <div class="trip-route">Bafoussam → Douala</div>
+                  <div class="trip-driver">Conducteur : Jean Dupont</div>
+                  <div class="trip-seats">40 / 70 places réservées</div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Jeudi -->
+          <div class="day-block" role="region" aria-labelledby="day4-title">
+            <div class="day-title" id="day4-title">Jeudi 08/05</div>
+            <div class="trips-list" aria-label="Aucun trajet planifié ce jour">
+              <p class="text-muted fst-italic">Aucun trajet planifié</p>
+            </div>
+          </div>
+
+          <!-- Vendredi -->
+          <div class="day-block" role="region" aria-labelledby="day5-title">
+            <div class="day-title" id="day5-title">Vendredi 09/05</div>
+            <div class="trips-list">
+              <article class="trip-card" tabindex="0"
+                aria-label="Trajet à 11h00 de Kribi vers Yaoundé, conducteur Marie Claire, 35 places réservées sur 70">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+                  alt="Image du trajet Kribi vers Yaoundé" class="trip-img" loading="lazy" />
+                <div class="trip-info">
+                  <div class="trip-time">11:00</div>
+                  <div class="trip-route">Kribi → Yaoundé</div>
+                  <div class="trip-driver">Conducteur : Marie Claire</div>
+                  <div class="trip-seats">35 / 70 places réservées</div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Samedi -->
+          <div class="day-block" role="region" aria-labelledby="day6-title">
+            <div class="day-title" id="day6-title">Samedi 10/05</div>
+            <div class="trips-list" aria-label="Aucun trajet planifié ce jour">
+              <p class="text-muted fst-italic">Aucun trajet planifié</p>
+            </div>
+          </div>
+
+          <!-- Dimanche -->
+          <div class="day-block" role="region" aria-labelledby="day7-title">
+            <div class="day-title" id="day7-title">Dimanche 11/05</div>
+            <div class="trips-list">
+              <article class="trip-card" tabindex="0"
+                aria-label="Trajet à 16h00 de Douala vers Bafoussam, conducteur Paul Martin, 50 places réservées sur 70">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&q=80"
+                  alt="Image du trajet Douala vers Bafoussam" class="trip-img" loading="lazy" />
+                <div class="trip-info">
+                  <div class="trip-time">16:00</div>
+                  <div class="trip-route">Douala → Bafoussam</div>
+                  <div class="trip-driver">Conducteur : Paul Martin</div>
+                  <div class="trip-seats">50 / 70 places réservées</div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+
+</html>

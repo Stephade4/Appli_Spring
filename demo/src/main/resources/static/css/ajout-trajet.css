@@ -1,0 +1,35 @@
+@import url('dashboard.css');
+
+.cent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 25%;
+    margin-top: 5%;
+}
+
+table{
+    margin-top: 3%;
+}
+
+table thead{
+  background-color: var(--blue-nuit);
+  color: var(--blanc);
+}
+
+table tbody tr:hover {
+  background-color: var(--gris-clair);
+}
+
+.sen{
+    margin-top: 3%;
+    margin-left: 60%;
+}
+
+.recul{
+    margin-top: 3%;
+    margin-left: 20%;
+}

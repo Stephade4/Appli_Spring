@@ -1,0 +1,24 @@
+@import url('dashboard.css');
+
+form label {
+  font-weight: 600;
+  color: var(--gris-fonce);
+}
+
+form .btn-primary {
+  background-color: var(--blue-nuit);
+  border: none;
+}
+
+form .btn-primary:hover {
+  background-color: var(--blue-clair);
+}
+
+.table thead {
+  background-color: var(--blue-nuit);
+  color: var(--blanc);
+}
+
+.table tbody tr:hover {
+  background-color: var(--gris-clair);
+}

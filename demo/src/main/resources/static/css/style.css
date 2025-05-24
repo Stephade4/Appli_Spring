@@ -1,0 +1,82 @@
+.image {
+    /*background-image: url("/image/photo_car_small.jpeg");*/
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    background-color: #ACC8E5; color: #112A46;
+    font-family: Arial,sans-serif;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: cornflowerblue;
+    padding: 10px 20px;
+}
+.logo {
+    font-size: 50px;
+    font-weight: bold;
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 300px;
+}
+nav a {
+    color: cornflowerblue;
+    text-decoration: #ACC8E5;
+    font-size: 25px;
+}
+.search {
+    margin-left: 20px;
+}
+.search input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+body {margin:0;
+    font-family: Arial,sans-serif;
+}
+
+/*.inline_block{*/
+/*    display: inline-block;*/
+/*}*/
+
+input{
+    border: #112A46 solid 3px;
+}
+
+.block1{
+    width: 300px;
+    /*display: inline-block;*/
+    border: darkgray solid 2px ;
+    border-radius: 10px;
+    height: 500px;
+}
+
+.sous_block1{
+
+}
+
+.logo_connexion{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 300px;
+
+}
+
+.block2{
+    width: 700px;
+    display: inline-block;
+    border: black solid 2px;
+}
+
+
+.img1{
+    width: 700px;
+}

@@ -1,0 +1,16 @@
+@import url('dashboard.css'); /* Partage les styles communs */
+
+table thead {
+  background-color: var(--blue-nuit);
+  color: var(--blanc);
+}
+
+table tbody tr:hover {
+  background-color: var(--gris-clair);
+}
+
+input[type="checkbox"] {
+  width: 1.2em;
+  height: 1.2em;
+  cursor: pointer;
+}

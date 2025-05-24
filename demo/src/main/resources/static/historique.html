@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historique - Car-Set</title>
+    <link href="input.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#112A46',
+                        secondary: '#ACC8E5',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+    <header>
+        <nav class="flex justify-between items-center bg-white shadow-md ">
+        <div class="ml-5 md:flex md:items-center">
+            <div class="">
+                <img class="md:h-8 h-5 w-auto inline" src="images/Car-Set.png" alt="Car-Set">
+                <button class="md:hidden relative text-3xl cursor-pointer block mobile-button" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                        <path fill="#fff" d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"/>
+                    </svg>
+                </button>
+                <button class="text-3xl cursor-pointer hidden outline-none focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                        <path fill="#fff" d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4"/>
+                    </svg>
+                </button>
+            </div>
+          <div class="md:flex md:flex-row flex-col md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-5 md:pl-0 pl-1.5
+            md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 mobile-menu">
+              <a class="mx-10 my-5 md:my-0 text-primary text-2xl text-bold cursor-pointer" href="index.html">Accueil</a>
+              <a class="mx-5 my-5 md:my-0 text-secondary text-2xl text-bold cursor-pointer" href="covoiturage.html">Covoiturage</a>
+              <a class="mx-5 my-5 md:my-0 text-secondary text-2xl text-bold cursor-pointer" href="reservation.html" >Reservation</a>
+          </div>
+        </div>
+        <div class="mr-5 sm:static sm:inset-auto sm:ml-6 sm:pr-0 my-2">
+            <ul class="md:flex md:items-center inline-flex mt-4">
+                <li>
+                    <span class="inline-flex">
+                        <input type="text" placeholder="Rechercher" class="px-4 py-2 border rounded-lg">
+                        <img class="md:size-8 size-3 rounded-full mt-2 mx-2" src="images/search.svg" alt="User">
+                      </span>
+                </li>
+                <li>
+                    <span class="">
+                        <a href="inscription.html">
+                            <img class="md:size-8 size-3 rounded-full mx-3"" src="images/user.svg" alt="User">
+                        </a>
+                      </span>
+                </li>
+                <li>
+                    <span class="">
+                        <a href="historique.html">
+                            <img class="md:size-8 size-3 rounded-full mx-3"" src="images/notif.svg" alt="User">
+                        </a>
+                      </span>
+                </li>
+            </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class=" mx-5 my-5 p-6 bg-white shadow-xl ">
+        <h2 class="text-2xl font-semibold text-primary text-center ">VOS RESERVATIONS PASSEES</h2>
+        <div class="grid gap-4 mt-4 text-lg">
+            <div class="border p-4 rounded shadow-md hover:bg-primary  hover:bg-opacity-50 hover:text-white hover:cursor-pointer active:scale-95 transition-transform transform">
+                <p>19-04-2024 à 16h</p>
+                <p class="text-xl  font-semibold">Douala - Bagangte</p>
+                <p>Type de trajet: VIP</p>
+            </div>
+            <div class="border p-4 rounded shadow-md hover:bg-primary  hover:bg-opacity-50 hover:text-white hover:cursor-pointer active:scale-95 transition-transform transform">
+                <p>30-03-2024 à 12h</p>
+                <p class="text-xl  font-semibold">Douala - Edéa</p>
+                <p>Type de trajet: Eco</p>
+            </div>
+            <div class="border p-4 rounded shadow-md hover:bg-primary  hover:bg-opacity-50 hover:text-white hover:cursor-pointer active:scale-95 transition-transform transform">
+                <p>19-04-2024 à 12h</p>
+                <p class="text-xl  font-semibold">Douala - Limbe</p>
+                <p>Type de trajet: Standard</p>
+            </div>
+            <div class="border p-4 rounded shadow-md hover:bg-primary  hover:bg-opacity-50 hover:text-white hover:cursor-pointer active:scale-95 transition-transform transform">
+                <p>19-04-2024 à 12h</p>
+                <p class="text-xl  font-semibold">Douala - Yaoundé</p>
+                <p>Type de trajet: VIP</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center text-white text-xl font-semibold py-8 border-t bg-primary w-full ">
+        <div class="flex justify-center space-x-4 mb-2">
+            <div class="inline-flex p-4">
+                <img src="images/ic--baseline-email.png" alt="" class="W-8 h-8">
+                <a href="mailto:setcar@gmail.com" class="text-white hover:underline mt-1/2">setcar@gmail.com</a>
+            </div>
+            <div class="inline-flex p-4">
+                <img src="images/ic--baseline-facebook.png" alt="" class="W-8 h-8">
+                <a href="#" class="text-white hover:underline mt-1/2">Set-Car</a>
+            </div>
+            <div class="inline-flex p-4">
+                <img src="images/ic--baseline-whatsapp.png" alt="" class="W-8 h-8">
+                <a href="tel:+237620121059" class="text-white hover:underline mt-1/2">+237 620 121 059</a>
+            </div>
+            <div class="inline-flex p-4">
+                <img src="images/ic--baseline-local-phone.png" alt="" class="W-8 h-8">
+                <a href="tel:+237620121059" class="text-white hover:underline mt-1/2">+237 620 121 059</a>
+
+            </div>
+
+        </div>
+        <div class="flex justify-center space-x-4 mt-2">            
+            <a href="#" class="text-white hover:underline">Covoiturage</a>
+            <a href="#" class="text-white hover:underline">Reserver</a>
+            <a href="#" class="text-white hover:underline">Rechercher</a>
+            <a href="#" class="text-white hover:underline">A Propos</a>
+        </div>
+        <hr class="">
+        <p class="mt-2">© 2025, Tout droit réservé.</p>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@import url('dashboard.css');
+
+table thead {
+  background-color: var(--blue-nuit);
+  color: var(--blanc);
+}
+
+table tbody tr:hover {
+  background-color: var(--gris-clair);
+}
+
+.badge {
+  font-size: 0.9rem;
+}

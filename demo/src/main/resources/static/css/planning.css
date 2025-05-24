@@ -1,0 +1,31 @@
+/* Import variables and common styles if needed */
+@import url('dashboard.css'); /* Optional if you want to share styles */
+
+body {
+  /* Override or add page-specific styles if needed */
+}
+
+/* Form styling */
+form label {
+  font-weight: 600;
+  color: var(--gris-fonce);
+}
+
+form .btn-primary {
+  background-color: var(--blue-nuit);
+  border: none;
+}
+
+form .btn-primary:hover {
+  background-color: var(--blue-clair);
+}
+
+/* Table styling */
+table thead {
+  background-color: var(--blue-nuit);
+  color: var(--blanc);
+}
+
+table tbody tr:hover {
+  background-color: var(--gris-clair);
+}
