@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widht=device-widht,initial-scale=1.0">
+    <title>Inscription-Car-set</title>
+<!--    <link rel="stylesheet" th:href="@{style/style.css}" >-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" th:href="@{fontawesome5/css/all.css/all.min.css}" />
+<!--    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />-->
+    <link rel="stylesheet" th:href="@{style/style2.css}" >
+</head>
+<!--<script>-->
+<!--    document.addEventListener("DOMContentLoaded", function () {-->
+<!--        const form = document.forms["fomulaire"];-->
+<!--        const inputs = form.querySelectorAll("input[type='text'], input[type='email'], input[type='password']");-->
+<!--        const submitBtn = form.querySelector("button[type='submit']");-->
+
+<!--        form.addEventListener("submit", function (event) {-->
+<!--            let valid = true;-->
+<!--            inputs.forEach(input => {-->
+<!--                if (!input.value.trim()) {-->
+<!--                    input.style.border = "1px solid red";-->
+<!--                    valid = false;-->
+<!--                } else {-->
+<!--                    input.style.border = "1px solid #ccc";-->
+<!--                }-->
+<!--            });-->
+
+<!--            if (!valid) {-->
+<!--                event.preventDefault();-->
+<!--                alert("Veuillez remplir tous les champs.");-->
+<!--            }-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
+
+<body>
+
+        <header class="header">
+            <div class="logo">Car-Set</div>
+            <nav>
+                <a th:href="@{login}">Accuiel</a>
+                <a th:href="@{register}">Connexion</a>
+        <!--        <a th:href="@{searh}"></a>-->
+                <a href="#"><img class="profile-icon" th:src="@{/image/ic--baseline-search.png}" alt="rechercher"></a>
+                <div class="search">
+                    <input type="text" placeholder="Recherche....">
+                </div>
+            </nav>
+        </header>
+
+        <main class="main-container">
+            <section class="form-section">
+
+                <div class="form-card">
+
+                    <div class="avatar-icon">
+                        <img class="form-image" th:src="@{/image/ic--baseline-account-circle.png}">
+                    </div>
+
+                    <h2>Créer un compte</h2>
+                    <p class="small-text">Déjà un compte ? <a th:href="@{/login}">Connexion</a></p>
+
+                    <form th:action="@{register}" th:object="${user}" name="fomulaire" method="post">
+
+                        <input type="hidden" th:field="${user.idUser}">
+                         <label for=" nom et prenom">nom et prenom</label>
+                        <input type="text" th:field="${user.nom_prenom_user}" id=" nom et prenom"><br>
+                        <label for=" numCNI">numero de CNI</label>
+                        <input type="text" th:field="${user.numCNI_user}" id=" numCNI"><br>
+                        <label for=" email">Adresse e-mail</label>
+                        <input type="text" th:field="${user.email_user}" id=" email"><br>
+                        <label for=" Telephone">Telephone</label>
+                        <input type="text" th:field="${user.telephone_user}" id=" Telephone"><br>
+                        <label for=" Profession">Profession</label>
+                        <input type="text" th:field="${user.profession_user}" id=" Profession"><br>
+                        <label for="password">mot de passe</label>
+                        <input type="text" th:field="${user.password_user}" id="password">
+                        <button type="submit" name="submit">Valide</button>
+                    </form>
+
+                </div>
+                <div class="image-section">-->
+                    <img class="form-image" th:src="@{/image/driver2.jpg}" alt="driver"/>-->
+                </div>
+            </section>
+        </main>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <p>Contact : <a href="mailto:settar@gmail.com"></a> </p>
+                    <p> telephone :<strong>+237 620 121 059</strong></p>
+                </div>
+
+                <div class="social-links">
+                    <div class="inline_block">
+                        <a href="#"><i class="fab fa-facebook-f">    Set-car</i></a>
+                        <a href="#"><i class="fab fa-twitter">    Twitter</i></a>
+                    </div>
+                    <div class="inline_block">
+                        <a href="#"><i class="fab fa-instagram">    Instagram</i></a>
+                    </div>
+
+                </div>
+
+                <div class="footer-links">
+                    <a href="#">covoiturage</a>|
+                    <a href="#">Recherche</a>|
+                    <a href="">A propos</a>
+                </div>
+                <div class="copyright"> 2025, tout droit reserve</div>
+            </div>
+        </footer>
+
+</body>
+</html>

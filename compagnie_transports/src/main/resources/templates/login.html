@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>connexion</title>
+     <link rel="stylesheet" th:href="@{style/style2.css}">
+    <link rel="stylesheet" th:href="@{fontawesome5/css/all.css/all.min.css}" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!--    <style>-->
+<!--        body {background-color: #ACC8E5; color: #112A46; }-->
+    </style>
+</head>
+<body>
+
+         <header class="header">
+             <div class="logo">Car-Set</div>
+             <nav>
+                 <a th:href="@{login}">Accuiel</a>
+                 <a th:href="@{register}">Connexion</a>
+                 <!--        <a th:href="@{searh}"></a>-->
+                 <a href="#"><img class="profile-icon" th:src="@{/image/ic--baseline-search.png}" alt="rechercher"></a>
+                 <div class="search">
+                     <input type="text" placeholder="Recherche....">
+                 </div>
+             </nav>
+         </header>
+
+      <main class="main-container">
+          <section class="form-section">
+
+              <div class="image-section">-->
+                  <img class="form-image" th:src="@{/image/driver2.jpg}" alt="driver"/>-->
+              </div>
+
+              <div class="form-card">
+
+                  <div class="avatar-icon">
+                      <img class="form-image" th:src="@{/image/ic--baseline-account-circle.png}">
+                  </div>
+
+                  <form action="/login" method="post">
+                      <p>pas de compte? <a href="/register">creer un compte</a></p>
+                      <br>
+
+                      <label for="email">Adresse email:</label><br>
+                      <input type="email" id="email" name="email"required><br>
+                      <label for="password"> mot de passe:</label><br>
+                      <input type="password" id="password" name="password"><br>
+                      <button type="submit" name="submit">se connecter</button>
+                  </form>
+              </div>
+
+          </section>
+
+
+          </p>
+        </form>
+      </main>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+
+     <footer class="footer">
+         <div class="footer-content">
+             <div class="contact-info">
+                 <p>Contact : <a href="mailto:settar@gmail.com"></a> </p>
+                 <p> telephone :<strong>+237 620 121 059</strong></p>
+             </div>
+
+             <div class="social-links">
+                 <div class="inline_block">
+                     <a href="#"><i class="fab fa-facebook-f">    Set-car</i></a>
+                     <a href="#"><i class="fab fa-twitter">    Twitter</i></a>
+                 </div>
+                 <div class="inline_block">
+                     <a href="#"><i class="fab fa-instagram">    Instagram</i></a>
+                 </div>
+
+             </div>
+
+             <div class="footer-links">
+                 <a href="#">covoiturage</a>|
+                 <a href="#">Recherche</a>|
+                 <a href="">A propos</a>
+             </div>
+             <div class="copyright"> 2025, tout droit reserve</div>
+         </div>
+     </footer>
+
+</body>
+
+
+</html>
